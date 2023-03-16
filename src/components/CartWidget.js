@@ -1,12 +1,10 @@
 
-import logo from '../components/img/carrito.png'
+import logo from '../img/carrito.png'
 const CartWidget = () =>{
     return (
         <>
         <img src ={logo} style={{width:30}}/>
-        <h2>
-
-        </h2>
+        <h5>4</h5>
         </>
     )
 }

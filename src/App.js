@@ -1,27 +1,50 @@
 
 import './App.css';
+import { useState } from 'react';
 import Counter from './components/Counter';
-import Button from './components/Button';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter,Route,Routes, Link } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetail from './components/ItemDetail';
 
 function App() {
 
+// const[show, setShow]= useState('list')
 
-const myFunction = ()=>{
-  console.log('hice click')
+
+const handleOnAdd = (quantity)=>{
+  console.log(`se agregaron ${quantity} productos al carrito`)
 }
 
 
 
   return (
-    <div className="App">
-     <NavBar/>
-     <h1>UFO SHOP</h1>
-     <ItemListContainer greeting = {"Hola "}/>
-     <Counter/>
-     <Button callback ={myFunction}/>
+    <>
+<div className="App">
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+    <Route  path='/category/:categoryId' element ={<ItemListContainer/>}/>
+      <Route  path='/' element ={<ItemListContainer/>}/>
+      <Route  path='/detail/:productId' element ={<ItemDetailContainer/>}/>
+    </Routes>
+
+
+    </BrowserRouter>
+
+    
+
+     {/* <button onClick={()=>setShow('list')}> List</button>
+     <button onClick={()=>setShow('detail')}>Detail</button>  */}
+     {/* {show === 'list'  ? <ItemListContainer/>:null }
+     {show === 'detail'? <ItemDetailContainer/> :null} */}
+     {/* <Counter/> */}
+     {/* <button onClick={()=> setShow(!show )}>{show ? 'Desmontar contador':'Montar contador'}
+      { show ? <Counter initial={0} stock={10} onAdd={handleOnAdd}/>:null}
+    </button> */}
     </div>
+     </> 
   );
 }
 
