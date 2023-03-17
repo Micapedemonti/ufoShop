@@ -2,11 +2,12 @@
 import './App.css';
 import { useState } from 'react';
 import Counter from './components/Counter';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter,Route,Routes, Link } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemDetail from './components/ItemDetail';
+
 
 function App() {
 
@@ -27,13 +28,11 @@ const handleOnAdd = (quantity)=>{
     <Routes>
     <Route  path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route  path='/' element ={<ItemListContainer/>}/>
-      <Route  path='/detail/:productId' element ={<ItemDetailContainer/>}/>
+      <Route  path='/Detail/:productId' element ={<ItemDetailContainer/>}/>
     </Routes>
 
 
     </BrowserRouter>
-
-    
 
      {/* <button onClick={()=>setShow('list')}> List</button>
      <button onClick={()=>setShow('detail')}>Detail</button>  */}

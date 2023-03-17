@@ -42,6 +42,19 @@ const products = [
 
 ]
 
+const categories =[
+    {id: 'tablas', name: 'TABLAS'},
+    {id: 'skates', name: 'SKATES'},
+    {id: 'ruedas', name: 'RUEDAS'}
+]
+export const getCategories =()=>{
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve(categories)
+        })
+    })
+}
+
 
 export const getProducts = (categoryId) =>{
     return new Promise (resolve =>{
@@ -54,7 +67,7 @@ export const getProducts = (categoryId) =>{
 export const getProductsById = (id) =>{
         return new Promise (resolve =>{
             setTimeout (()=>{
-                resolve(products.find(prod => prod.id===id))
+                resolve(products.find(product => product.id == id))
             },2000)
         })
     
