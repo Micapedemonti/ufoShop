@@ -26,7 +26,6 @@ const handleOnAdd = (quantity)=>{
 <div className="App">
     <BrowserRouter>
     <NavBar/>
-    <Link to = '/form'>Form</Link>
     <Routes>
     <Route  path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route  path='/' element ={<ItemListContainer/>}/>
