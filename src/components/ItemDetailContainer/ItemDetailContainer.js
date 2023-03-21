@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
-import { getProductsById } from "./AsynMock"
-import ItemDetail from "./ItemDetail"
+import { getProductsById } from "../AsynMock"
+import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router"
 
 

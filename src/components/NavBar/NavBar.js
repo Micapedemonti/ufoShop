@@ -1,6 +1,6 @@
 import './NavBar.css'
 import { Link,NavLink } from 'react-router-dom';
-import CartWidget from '../CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import { getCategories } from '../AsynMock';
 import { useState,useEffect } from 'react';
 
