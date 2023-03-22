@@ -1,13 +1,11 @@
 
 import './App.css';
 import { useState } from 'react';
-import Counter from './components/Counter/Counter';
 import NavBar from './components/NavBar/NavBar';
-import Form from './components/Form/Form';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter,Route,Routes, Link } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import ItemDetail from './components/ItemDetail/ItemDetail';
+import ItemCart from './components/ItemCart/ItemCart';
 
 
 function App() {
@@ -30,7 +28,7 @@ const handleOnAdd = (quantity)=>{
     <Route  path='/category/:categoryId' element ={<ItemListContainer/>}/>
       <Route  path='/' element ={<ItemListContainer/>}/>
       <Route  path='/Detail/:productId' element ={<ItemDetailContainer/>}/>
-      <Route  path='/form' element ={<Form/>}/>
+      <Route  path='/cart' element ={<ItemCart/>}/>
     </Routes>
 
 

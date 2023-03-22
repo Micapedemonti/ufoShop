@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import logo from '../../img/carrito.png'
-
+import NavBar from '../NavBar/NavBar'
 
 const CartWidget = ({count}) =>{
 
@@ -10,6 +9,7 @@ const CartWidget = ({count}) =>{
         <>
         <img src ={logo} style={{width:30}}/>
         <h5>{count}</h5>
+        <NavBar count ={count}/>
         </>
     )
 }
